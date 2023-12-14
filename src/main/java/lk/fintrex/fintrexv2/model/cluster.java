@@ -2,12 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package lk.fintrex.fintrexv2.dto;
+package lk.fintrex.fintrexv2.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 /**
  *
@@ -15,15 +18,13 @@ import lombok.Setter;
  */
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
 @Setter
-public class LoadRedCount2DTO {
+@Getter
+@ToString
+@Table("cluster")
+public class cluster {
 
-    private Integer count1toThree;
-    private Integer count0toThree;
-    private Integer count99toThree;
-    private Integer count0toTwo;
-    private Integer count99toTwo;
-    private Integer count99toOne;
-
+    @Id
+    private Integer id;
+    private String cluster_name;
 }

@@ -19,15 +19,13 @@ import lombok.Setter;
 @Setter
 public class LoadGreenCountDTO {
 
-    private Integer count3toTwo;
-    private Integer count3toOne;
-    private Integer count3toZero;
-    private Integer count3toNinenine;
-    private Integer count2toOne;
-    private Integer count2toZero;
-    private Integer count2toNinenine;
-    private Integer count1toZero;
-    private Integer count1toNinenine;
-    private Integer count0toNinenine;
+    private Integer countage3to0;
+    private Integer countage2to0;
+    private Integer countage1to0;
+    private Integer countage0to0;
 
+    private Float exposureAge3to0;
+    private Float exposureAge2to0;
+    private Float exposureAge1to0;
+    private Float exposureAge0to0;
 }

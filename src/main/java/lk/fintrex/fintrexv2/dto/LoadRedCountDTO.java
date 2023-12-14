@@ -17,11 +17,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class LoadRedCount1DTO {
+public class LoadRedCountDTO {
 
-    private Integer count3toTwo;
-    private Integer count2toOne;
-    private Integer count1toZero;
-    private Integer count0toNinenine;
-
+    private Integer r3l;
+    private Integer r2l;
+    private Integer r1l;
+    private Integer r0l;
+    private Integer rt;
+    private Float r3le;
+    private Float r2le;
+    private Float r1le;
+    private Float r0le;
+    private Float re;
 }

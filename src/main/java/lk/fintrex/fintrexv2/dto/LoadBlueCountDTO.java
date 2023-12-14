@@ -24,5 +24,11 @@ public class LoadBlueCountDTO {
     private Integer age1Count;
     private Integer age0Count;
     private Integer age99Count;
+    private Double exposureThree;
+    private Double exposureTwo;
+    private Double exposureOne;
+    private Double exposureZero;
+    private Double exposureNinenine;
+    private Double totalExposure;
 
 }
