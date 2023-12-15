@@ -14,6 +14,20 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <%@include file="jspf/header.jspf" %>
         <style>
+            #firstv2 {
+                width: auto;
+                table-layout: fixed;
+            }
+
+            .table-responsive {
+                overflow-x: auto;
+                max-width: 100%;
+            }
+
+            .card {
+                width: 100%;
+            }
+
             .placeholder {
                 cursor: auto !important;
                 background-color: #ffffff !important;
@@ -46,8 +60,8 @@
         </style>
     </head>
 
-    <body>
-        <div style="padding: 70px; padding-top: 10px;">
+    <body style="background-color: #303549">
+        <div style="padding: 70px; padding-top: 25px;">
             <div id="bigDiv" class="card" style="width: auto;">
                 <div class="card-body">
                     <h5 class="card-title">Select Parameter</h5>
@@ -76,7 +90,7 @@
             </div>
         </div>
 
-        <div id="hidden" style="display: none; padding: 15px;">
+        <div id="hidden" style="display: none; padding: 5px;">
             <div class="card">
                 <div class="card-header">
                     <div class="row">
@@ -84,7 +98,7 @@
                             <h6 class="m-0" id="name"></h6>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-danger" id="reset">Reset Table</button>
+                            <button type="button" class="btn btn-danger" id="reset">Home</button>
                         </div>
                     </div>
                 </div>
@@ -134,13 +148,13 @@
                                     <td id="3ip" class="right">0</td>
                                     <td id="3b">0</td>
                                     <td id="3be" class="right">0</td>
-                                    <td id="3cie">0</td>
+                                    <td id="3cie" class="right">0</td>
                                     <td id="30">0</td>
                                     <td id="3ze" class="right">0.00</td>
-                                    <td id="3zep">0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
+                                    <td id="3zep" class="right">0</td>
+                                    <td id="p31">0</td>
+                                    <td id="p32" class="right">0</td>
+                                    <td id="p33" class="right">0</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -154,16 +168,16 @@
                                     <td id="2ip" class="right">0</td>
                                     <td id="2b">0</td>
                                     <td id="2be" class="right">0</td>
-                                    <td id="2cie">0</td>
+                                    <td id="2cie" class="right">0</td>
                                     <td id="20">0</td>
                                     <td id="2ze" class="right">0.00</td>
-                                    <td id="2zep">0</td>
+                                    <td id="2zep" class="right">0</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
+                                    <td id="r23">0</td>
+                                    <td id="r22" class="right">0</td>
+                                    <td id="r21" class="right">0</td>
                                 </tr>
                                 <tr>
                                     <td>1 - 2</td>
@@ -174,10 +188,10 @@
                                     <td id="1ip" class="right">0</td>
                                     <td id="1b">0</td>
                                     <td id="1be" class="right">0</td>
-                                    <td id="1cie">0</td>
+                                    <td id="1cie" class="right">0</td>
                                     <td id="10">0</td>
                                     <td id="1ze" class="right">0.00</td>
-                                    <td id="1zep">0</td>
+                                    <td id="1zep" class="right">0</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -194,10 +208,10 @@
                                     <td id="0ip" class="right">0</td>
                                     <td id="0b">0</td>
                                     <td id="0be" class="right">0</td>
-                                    <td id="0cie">0</td>
+                                    <td id="0cie" class="right">0</td>
                                     <td id="00">0</td>
                                     <td id="0ze" class="right">0.00</td>
-                                    <td id="0zep">0</td>
+                                    <td id="0zep" class="right">0</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -214,10 +228,10 @@
                                     <td id="99ip" class="right"></td>
                                     <td id="99b">0</td>
                                     <td id="99be" class="right">0</td>
-                                    <td id="99cie">0</td>
+                                    <td id="99cie" class="right">0</td>
                                     <td id="990"></td>
                                     <td id="99ze" class="right"></td>
-                                    <td id="99zep"></td>
+                                    <td id="99zep" class="right"></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -234,17 +248,55 @@
                                     <td class="table-dark right" id="tip">0</td>
                                     <td class="table-dark" id="mt">0</td>
                                     <td class="table-dark right" id="met">0</td>
-                                    <td class="table-dark" id="tcie">0</td>
+                                    <td class="table-dark right" id="tcie">0</td>
                                     <td class="table-dark" id="tbt0">0</td>
                                     <td id="tze" class="table-dark right">0</td>
-                                    <td class="table-dark" id="rtce">0</td>
-                                    <td class="table-dark">0</td>
-                                    <td class="table-dark">0</td>
-                                    <td class="table-dark">0</td>
-                                    <td class="table-dark">0</td>
-                                    <td class="table-dark">0</td>
-                                    <td class="table-dark">0</td>
+                                    <td class="table-dark right" id="rtce">0</td>
+                                    <td id="t1" class="table-dark">0</td>
+                                    <td id="t2" class="table-dark right">0</td>
+                                    <td id="t3" class="table-dark right">0</td>
+                                    <td id="t4" class="table-dark">0</td>
+                                    <td id="t5" class="table-dark right">0</td>
+                                    <td id="t6" class="table-dark right">0</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hidden_view" style="display: none; padding: 5px;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="m-0" id="name"></h6>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger" id="reset">Home</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover" id="firstv2">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Subject</th>
+                                    <!--<th>Description</th>-->
+                                    <th>Priority</th>
+                                    <th>Project</th>
+                                    <th>Board</th>
+                                    <th>Parameter</th>
+                                    <th>Assigned To</th>
+                                    <th>Behalf Of</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                             </tbody>
                         </table>
                     </div>
@@ -310,7 +362,6 @@
                 var clu = document.getElementById("clu");
                 col.style.display = "block";
 
-
                 $('#param').change(function () {
                     var selectedOption = $(this).val();
                     col.style.display = "none";
@@ -323,15 +374,27 @@
                     }
                 });
 
-                var expTotal = 0;
-                var redTotalExp = 0;
-                var blueTotalExp = 0;
-
                 document.getElementById('reset').addEventListener('click', function () {
                     location.reload();
                 });
 
+                var expTotal = 0;
+                var redTotalExp = 0;
+                var blueTotalExp = 0;
+
+                var h3e = 0;
+                var h2e = 0;
+                var h1e = 0;
+                var h0e = 0;
+                var h99e = 0;
+
+                var r3e = 0;
+                var r2e = 0;
+                var r1e = 0;
+                var r0e = 0;
+
                 $(document).on('click', '#show2', function () {
+                    expTotal = 0;
                     if ($('#cluster').val() !== null) {
                         document.getElementById('name').textContent = '' + $('#cluster').val() + '';
                         var hiddenBlock = document.getElementById("hidden");
@@ -339,6 +402,165 @@
                         var bigDiv = document.getElementById("bigDiv");
                         bigDiv.style.display = "none";
 
+                        fetch('project/hash-count-cluster', {
+                            method: 'POST',
+                            body: new URLSearchParams({
+                                user: $('#cluster').val()
+                            })
+                        }).then((res) => res.json()).then((data) => {
+                            for (var i = 0; i < data.length; i++) {
+                                if (data[i].ageRange === 3) {
+                                    $('#3').html(data[i].ageCount);
+                                    $('#3e').html(data[i].totalExposure.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    h3e = data[i].totalExposure;
+                                } else if (data[i].ageRange === 2) {
+                                    $('#2').html(data[i].ageCount);
+                                    $('#2e').html(data[i].totalExposure.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    h2e = data[i].totalExposure;
+                                } else if (data[i].ageRange === 1) {
+                                    $('#1').html(data[i].ageCount);
+                                    $('#1e').html(data[i].totalExposure.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    h1e = data[i].totalExposure;
+                                } else if (data[i].ageRange === 0) {
+                                    $('#0').html(data[i].ageCount);
+                                    $('#0e').html(data[i].totalExposure.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    h0e = data[i].totalExposure;
+                                } else if (data[i].ageRange === 99) {
+                                    $('#99').html(data[i].ageCount);
+                                    $('#99e').html(data[i].totalExposure.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    h99e = data[i].totalExposure;
+                                } else if (data[i].ageRange === null) {
+                                    $('#totalHash').html(data[i].ageCount);
+                                    expTotal = data[i].totalExposure;
+                                    $('#totalExp').html(data[i].totalExposure.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                }
+                            }
+                            bluec();
+                            greenc();
+                            redc();
+                        });
+
+                        function bluec() {
+                            fetch('project/blue-count-cluster', {
+                                method: 'POST',
+                                body: new URLSearchParams({
+                                    user: $('#cluster').val()
+                                })
+                            }).then((res) => res.json()).then((data) => {
+                                for (var i = 0; i < data.length; i++) {
+                                    $('#3b').html(data[i].age3Count);
+                                    $('#2b').html(data[i].age2Count);
+                                    $('#1b').html(data[i].age1Count);
+                                    $('#0b').html(data[i].age0Count);
+                                    $('#99b').html(data[i].age99Count);
+                                    $('#3be').html(data[i].exposureThree.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#2be').html(data[i].exposureTwo.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#1be').html(data[i].exposureOne.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#0be').html(data[i].exposureZero.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#99be').html(data[i].exposureNinenine.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+
+                                    blueTotalExp = data[i].totalExposure;
+                                    $('#met').html(data[i].totalExposure.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    updatePercentage('3cie', data[i].exposureThree, h3e);
+                                    updatePercentage('2cie', data[i].exposureTwo, h2e);
+                                    updatePercentage('1cie', data[i].exposureOne, h1e);
+                                    updatePercentage('0cie', data[i].exposureZero, h0e);
+                                    updatePercentage('99cie', data[i].exposureNinenine, h99e);
+                                }
+
+                                $('#mt').html(parseFloat($('#3b').html()) + parseFloat($('#2b').html()) + parseFloat($('#1b').html()) + parseFloat($('#0b').html()) + parseFloat($('#99b').html()));
+
+                                updatePercentage('tcie', blueTotalExp, expTotal);
+                            });
+                        }
+
+                        function redc() {
+                            fetch('project/red-count-cluster', {
+                                method: 'POST',
+                                body: new URLSearchParams({
+                                    user: $('#cluster').val()
+                                })
+                            }).then((res) => res.json()).then((data) => {
+                                for (var i = 0; i < data.length; i++) {
+                                    $('#3d').html(data[i].r3l);
+
+                                    $('#p31').html(data[i].r3l);
+                                    $('#t1').html(data[i].r3l);
+
+                                    $('#2d').html(data[i].r2l);
+
+                                    $('#r23').html(data[i].r2l);
+                                    $('#t4').html(data[i].r2l);
+
+                                    $('#1d').html(data[i].r1l);
+                                    $('#0d').html(data[i].r0l);
+                                    $('#3de').html(data[i].r3le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+
+                                    $('#p32').html(data[i].r3le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#t2').html(data[i].r3le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    ttwo = data[i].r3le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+                                    $('#2de').html(data[i].r2le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+
+                                    $('#r22').html(data[i].r2le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#t5').html(data[i].r2le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+
+
+                                    $('#1de').html(data[i].r1le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#0de').html(data[i].r0le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    r3e = data[i].r3le;
+                                    r2e = data[i].r2le;
+                                    r1e = data[i].r1le;
+                                    r0e = data[i].r0le;
+                                    redTotalExp = r3e + r2e + r1e + r0e;
+                                    $('#totalRed').html(data[i].rt);
+                                    $('#tde').html(data[i].re.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                }
+                                updatePercentage('tip', redTotalExp, expTotal);
+                                updatePercentage('3ip', r3e, h3e);
+
+                                updatePercentage('p33', r3e, h3e);
+
+                                updatePercentage('2ip', r2e, h2e);
+
+                                updatePercentage('r21', r2e, h2e);
+
+                                updatePercentage('1ip', r1e, h1e);
+                                updatePercentage('0ip', r0e, h0e);
+
+                            });
+                        }
+
+                        function greenc() {
+                            fetch('project/green-count-cluster', {
+                                method: 'POST',
+                                body: new URLSearchParams({
+                                    user: $('#cluster').val()
+                                })
+                            }).then((res) => res.json()).then((data) => {
+                                for (var i = 0; i < data.length; i++) {
+                                    $('#30').html(data[i].countage3to0);
+                                    $('#20').html(data[i].countage2to0);
+                                    $('#10').html(data[i].countage1to0);
+                                    $('#00').html(data[i].countage0to0);
+                                    $('#3ze').html(data[i].exposureAge3to0.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#2ze').html(data[i].exposureAge2to0.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#1ze').html(data[i].exposureAge1to0.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#0ze').html(data[i].exposureAge0to0.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    gt = data[i].countage3to0 + data[i].countage2to0 + data[i].countage1to0 + data[i].countage0to0;
+                                    gte = data[i].exposureAge3to0 + data[i].exposureAge2to0 + data[i].exposureAge1to0 + data[i].exposureAge0to0;
+
+                                    updatePercentage('3zep', data[i].exposureAge3to0, h3e);
+                                    updatePercentage('2zep', data[i].exposureAge2to0, h2e);
+                                    updatePercentage('1zep', data[i].exposureAge1to0, h1e);
+                                    updatePercentage('0zep', data[i].exposureAge0to0, h0e);
+
+                                    $('#rtce').html(((gte / expTotal) * 100).toFixed(2) + '%');
+                                }
+                                $('#tze').html(gte.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                $('#tbt0').html(gt);
+                            });
+                        }
 
                     } else {
                         Swal.fire(
@@ -351,11 +573,6 @@
 
                 $(document).on('click', '#show', function () {
                     expTotal = 0;
-                    var h3e = 0;
-                    var h2e = 0;
-                    var h1e = 0;
-                    var h0e = 0;
-                    var h99e = 0;
                     if ($('#col_officers').val() !== null) {
                         document.getElementById('name').textContent = '' + $('#col_officers').val() + '';
                         var hiddenBlock = document.getElementById("hidden");
@@ -442,17 +659,29 @@
                                     user: $('#col_officers').val()
                                 })
                             }).then((res) => res.json()).then((data) => {
-                                var r3e = 0;
-                                var r2e = 0;
-                                var r1e = 0;
-                                var r0e = 0;
                                 for (var i = 0; i < data.length; i++) {
                                     $('#3d').html(data[i].r3l);
+
+                                    $('#p31').html(data[i].r3l);
+                                    $('#t1').html(data[i].r3l);
+
                                     $('#2d').html(data[i].r2l);
+
+                                    $('#r23').html(data[i].r2l);
+                                    $('#t4').html(data[i].r2l);
+
                                     $('#1d').html(data[i].r1l);
                                     $('#0d').html(data[i].r0l);
                                     $('#3de').html(data[i].r3le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+
+                                    $('#p32').html(data[i].r3le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#t2').html(data[i].r3le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    ttwo = data[i].r3le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
                                     $('#2de').html(data[i].r2le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+
+                                    $('#r22').html(data[i].r2le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                                    $('#t5').html(data[i].r2le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+
                                     $('#1de').html(data[i].r1le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
                                     $('#0de').html(data[i].r0le.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
                                     r3e = data[i].r3le;
@@ -465,7 +694,13 @@
                                 }
                                 updatePercentage('tip', redTotalExp, expTotal);
                                 updatePercentage('3ip', r3e, h3e);
+
+                                updatePercentage('p33', r3e, h3e);
+
                                 updatePercentage('2ip', r2e, h2e);
+
+                                updatePercentage('r21', r2e, h2e);
+
                                 updatePercentage('1ip', r1e, h1e);
                                 updatePercentage('0ip', r0e, h0e);
 

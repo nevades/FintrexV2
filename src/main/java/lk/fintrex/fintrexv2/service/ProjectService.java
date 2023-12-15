@@ -23,16 +23,32 @@ public class ProjectService {
         return usr.getHashCount(user);
     }
 
+    public Iterable<LoadHashCountDTO> getHashCountCluster(String user) {
+        return crepo.getHashCountCluster(user);
+    }
+
     public Iterable<LoadBlueCountDTO> getBlueCount(String user) {
         return usr.getBlueCount(user);
+    }
+
+    public Iterable<LoadBlueCountDTO> getBlueCountCluster(String user) {
+        return crepo.getBlueCountCluster(user);
     }
 
     public Iterable<LoadRedCountDTO> getRedCount(String user) {
         return usr.getRedCount(user);
     }
 
+    public Iterable<LoadRedCountDTO> getRedCountCluster(String user) {
+        return crepo.getRedCountCluster(user);
+    }
+
     public Iterable<LoadGreenCountDTO> getGreenCount(String user) {
         return usr.getGreenCount(user);
+    }
+
+    public Iterable<LoadGreenCountDTO> getGreenCountCluster(String user) {
+        return crepo.getGreenCountCluster(user);
     }
 
     public Iterable<SlimSelectDTO> getAllColOfficers(String search) {

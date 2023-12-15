@@ -27,9 +27,19 @@ public class ProjectController {
         return ser.getHashCount(user);
     }
 
+    @PostMapping("/hash-count-cluster")
+    public Iterable<LoadHashCountDTO> getHashCountCluster(@RequestParam String user) throws Exception {
+        return ser.getHashCountCluster(user);
+    }
+
     @PostMapping("/blue-count")
     public Iterable<LoadBlueCountDTO> getBlueCount(@RequestParam String user) throws Exception {
         return ser.getBlueCount(user);
+    }
+
+    @PostMapping("/blue-count-cluster")
+    public Iterable<LoadBlueCountDTO> getBlueCountCluster(@RequestParam String user) throws Exception {
+        return ser.getBlueCountCluster(user);
     }
 
     @PostMapping("/red-count")
@@ -37,9 +47,19 @@ public class ProjectController {
         return ser.getRedCount(user);
     }
 
+    @PostMapping("/red-count-cluster")
+    public Iterable<LoadRedCountDTO> getRedCountCluster(@RequestParam String user) throws Exception {
+        return ser.getRedCountCluster(user);
+    }
+
     @PostMapping("/green-count")
     public Iterable<LoadGreenCountDTO> getGreenCount(@RequestParam String user) throws Exception {
         return ser.getGreenCount(user);
+    }
+
+    @PostMapping("/green-count-cluster")
+    public Iterable<LoadGreenCountDTO> getGreenCountCluster(@RequestParam String user) throws Exception {
+        return ser.getGreenCountCluster(user);
     }
 
     @PostMapping("/search-col_officers")
