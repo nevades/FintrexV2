@@ -18,5 +18,5 @@ public class DataTablesResponse<T> {
     private long recordsTotal;
     private long recordsFiltered;
     private List<T> data;
-
+    
 }
