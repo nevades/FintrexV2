@@ -266,43 +266,67 @@
             </div>
         </div>
 
-        <div id="hidden_view" style="display: none; padding: 5px;">
-            <div class="card">
-                <div class="card-header">
-                    <div class="row">
-                        <div class="col">
-                            <h6 class="m-0" id="name"></h6>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-danger" id="reset">Home</button>
-                        </div>
+        <!-- Button trigger modal -->
+        <!--        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-hover" id="firstv2">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Subject</th>
-                                    <!--<th>Description</th>-->
-                                    <th>Priority</th>
-                                    <th>Project</th>
-                                    <th>Board</th>
-                                    <th>Parameter</th>
-                                    <th>Assigned To</th>
-                                    <th>Behalf Of</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!--        <div id="hidden_view" style="display: block; padding: 5px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="m-0" id="name"></h6>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-danger" id="reset">Home</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="firstv2">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Subject</th>
+                                            <th>Description</th>
+                                            <th>Priority</th>
+                                            <th>Project</th>
+                                            <th>Board</th>
+                                            <th>Parameter</th>
+                                            <th>Assigned To</th>
+                                            <th>Behalf Of</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
 
         <%@include file="jspf/scripts.jspf" %>
         <script type="text/javascript" src="files/js/slimselect.js"></script>
@@ -316,6 +340,17 @@
         </script>
         <script>
             $(document).ready(function () {
+
+                $('td').on('click', function () {
+                    // Get the text content of the clicked table cell
+                    var cellText = $(this).text();
+
+                    // Update the modal title with the cellText
+                    $('#exampleModalLabel').text('Modal Title: ' + cellText);
+
+                    // Show the modal
+                    $('#exampleModal').modal('show');
+                });
 
                 function updatePercentage(id, numerator, denominator) {
                     const result = ((numerator / denominator) * 100).toFixed(2) + '%';
