@@ -23,6 +23,8 @@ public class DataTableRequest {
     private String data;
     @JsonProperty(required = false)
     private String filter;
+    @JsonProperty(required = false)
+    private Integer type;
 
 //    public String get(String data) {
 //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

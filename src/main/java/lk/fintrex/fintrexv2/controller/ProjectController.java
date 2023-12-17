@@ -1,6 +1,9 @@
 package lk.fintrex.fintrexv2.controller;
 
+import lk.fintrex.fintrexv2.datatable.DataTableRequest;
+import lk.fintrex.fintrexv2.datatable.DataTablesResponse;
 import lk.fintrex.fintrexv2.dto.LoadBlueCountDTO;
+import lk.fintrex.fintrexv2.dto.LoadContractsDTO;
 import lk.fintrex.fintrexv2.dto.LoadGreenCountDTO;
 import lk.fintrex.fintrexv2.dto.LoadHashCountDTO;
 import lk.fintrex.fintrexv2.dto.LoadRedCountDTO;
@@ -11,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -72,6 +76,11 @@ public class ProjectController {
         return ser.getClusters(search);
     }
 
+    @PostMapping("/get-contracts")
+    public DataTablesResponse<LoadContractsDTO> getContracts(@RequestBody DataTableRequest param) throws Exception {
+        return ser.getContracts(param);
+    }
+    
     @ExceptionHandler(Exception.class)
     public ResponseEntity<CommonResponse> handleException(Exception e) {
         e.printStackTrace();
